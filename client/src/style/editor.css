@@ -1,0 +1,10 @@
+.editor {
+    width: 100%;
+    background-color: aquamarine;
+    border-radius: 5px;
+}
+
+.editor-label {
+    font-weight: bold;
+    margin-left: 10px;
+}

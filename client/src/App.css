@@ -1,38 +1,107 @@
+
 .App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.code-editor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.code-toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  background-color: #333;
+}
+
+.code-button {
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.code-button:hover{
+  background-color: greenyellow;
+  color:red;
+}
+
+.pane {
+  flex: 1;
+  display: flex;
+}
+
+.editor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+  margin: 8px;
+}
+
+.label {
+  background-color: #333;
+  color: #fff;
+  padding: 8px;
+  font-weight: bold;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+textarea {
+  flex: 1;
+  resize: none;
+  border: none;
+  padding: 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bottom-section {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.copy-notification {
+  background-color: #f7f7f7;
+  text-align: center;
+  padding: 8px;
+  /* display: ${isCopied ? 'block' : 'none'}; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.output {
+  flex: 1;
+}
+
+#output-iframe {
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+  border: none;
+  background-color: teal;
+}
+
+/* Element: copy-notification */
+.copy-notification {
+  margin: 10px;
+  color: green;
+  font-weight: bold;
+}
+
+/* Responsive Styles for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .code-editor {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .top-pane {
+    flex-direction: column;
   }
 }
+
